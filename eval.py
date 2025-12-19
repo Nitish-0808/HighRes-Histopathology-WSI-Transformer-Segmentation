@@ -215,6 +215,16 @@ def stitch_and_eval(args):
     for n,v in zip(class_names, mean_per_class_dice):
         print(f"{n:>7}: {v:.4f}")
     print(f"mDice  : {mean_mdice:.4f}")
+
+    mean_precision = per_wsi_precisions.mean(0).tolist()
+    mean_recall    = per_wsi_recalls.mean(0).tolist()
+    print("\n=== Validation (WSI-level) Precision ===")
+    for n, v in zip(class_names, mean_precision):
+        print(f"{n:>7}: {v:.4f}")
+
+    print("\n=== Validation (WSI-level) Recall ===")
+    for n, v in zip(class_names, mean_recall):
+        print(f"{n:>7}: {v:.4f}")
 ######################################################################################################################################    
 @torch.no_grad()
 def stitch_and_save_no_gt(args):

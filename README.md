@@ -1,18 +1,26 @@
 # 🧬 HighRes Histopathology Semantic Segmentation using Transformer
 
-> **A high-resolution transformer-based framework for efficient and precise segmentation of histopathology whole-slide images (WSIs)** - packaged with full Docker reproducibility for seamless dataset preparation, training, and evaluation 🧠💻
-
----
+> **A high-resolution transformer-based framework for efficient and precise segmentation of histopathology whole-slide images (WSIs)**🧠💻
 
 ## 🧪 Overview
-
 **HighRes-Histopathology-WSI-Transformer-Segmentation** provides an end-to-end deep learning pipeline for histopathology WSI segmentation.  
 It leverages **transformer-based contextual encoding** and **boundary-aware learning** to achieve high accuracy and robust generalization across tissue slides.
 
+## 🚀 Features
+
+✅ End-to-end pipeline for WSI segmentation  
+✅ Transformer backbone with boundary & dilation-aware training   
+✅ Configurable training hyperparameters and flexible dataset options  
+✅ Visual sanity checks for colored mask generation  
+✅ Evaluation and overlay visualization for predictions  
+
+## 🧰 Prerequisites
+Before proceeding, ensure the following resources are available in your environment:
+- **Pretrained Backbone Weights:**
+Download the pretrained backbone weights for model initialization from [this link](https://github.com/whai362/PVT/releases/download/v2/pvt_v2_b3.pth) and place the file at:
   ```bash
   <repo_root>/
   ```
-
 **Dataset Location:**
 Store the raw Whole Slide Images (WSIs) at:
   ```bash
@@ -35,7 +43,6 @@ Store the raw Whole Slide Images (WSIs) at:
               └── ...
 
   ```
-
 ## 📂 Directory Structure
 
 ```bash
@@ -56,7 +63,6 @@ FCBFormer/
     └── extra_preds/               # Predictions for extra/unseen slides
 ...
 ```  
-
 ## 🛠️ Training and validation Setup (Conda)
 ### 1) Clone the repository
 ```bash
