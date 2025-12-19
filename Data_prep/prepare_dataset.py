@@ -22,7 +22,7 @@ from typing import List, Optional, Tuple
 import numpy as np
 from PIL import Image
 from tqdm import tqdm
-
+Image.MAX_IMAGE_PIXELS = None
 # -------------------------
 # Config: color palette ? IDs
 # -------------------------
