@@ -147,6 +147,7 @@ def test(model, device, test_loader, epoch, perf_measure=None, num_classes=4):
 
 def build(args):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(device)
 
     if args.dataset in ["Kvasir", "CVC"]:
         # existing logic
